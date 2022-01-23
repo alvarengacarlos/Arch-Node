@@ -1,13 +1,14 @@
 {
-  "name": "my-project",
+  "name": "arch-node",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "commonjs",
   "scripts": {
     "test": "jest",
-    "start": "node ./src/index.js",
-    "dev": "nodemon ./src/index.js"
-  },
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },  
   "keywords": [],
   "author": "carlos henrique alvarenga dos santos",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "express": "^4.17.2"
   },
   "devDependencies": {
+    "eslint": "^8.7.0",
     "jest": "^27.4.7",
     "nodemon": "^2.0.15"
   }
