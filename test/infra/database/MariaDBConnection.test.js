@@ -2,7 +2,7 @@
 
 const MariaDBConnection = require("../../../src/infra/database/MariaDBConnection");
 
-test("Test database connection", async () => {
+test("Test database connection", () => {
     const mariadb = new MariaDBConnection();
 
     const config = {
@@ -11,10 +11,10 @@ test("Test database connection", async () => {
         pass: "dev",
         host: "localhost",
         port: "3306",
-        dbName: "mysql"
+        dbName: "arch_node"
     };
 
-    const result = await mariadb.getConnection(config);
+    const result = mariadb.getConnection(config);
 
     expect(typeof result === "object").toEqual(true);
 });

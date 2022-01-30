@@ -8,4 +8,7 @@ const config = env.readVariablesAndSetInObjectConfig();
 
 const mariadb = new MariaDBConnection();
 
-module.exports = mariadb.getConnection(config);
+const connection = mariadb.getConnection(config);
+mariadb.testConnection(connection);
+
+module.exports = connection;

@@ -4,11 +4,9 @@ const {Sequelize} = require("sequelize");
 
 class MariaDBConnection {
 
-    async getConnection(config) {
+    getConnection(config) {
 
         const connection = new Sequelize(`${config.db}://${config.user}:${config.pass}@${config.host}:${config.port}/${config.dbName}`);
-
-        await this.testConnection(connection);
 
         return connection;
     }
