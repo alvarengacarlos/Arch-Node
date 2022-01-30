@@ -1,12 +1,19 @@
 "use strict";
 
+const UserService = require("../service/UserService");
+
 class UserController {
 
-    index(req, res) {
-
+    async index(req, res) {
         const username = req.params.username;
 
-        res.send(`Welcome ${username}`);
+        const userService = new UserService();
+
+        const result = await userService.getUser();
+
+        let response = {message: `Welcome ${username}.`, result: result};
+
+        return res.status(200).json(response);
     }
 
 }
