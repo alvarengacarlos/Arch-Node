@@ -8,12 +8,15 @@
     "test": "jest",
     "start": "node ./src/app.js",
     "dev": "nodemon ./src/app.js"
-  },  
+  },
   "keywords": [],
   "author": "carlos henrique alvarenga dos santos",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "mariadb": "^2.5.5",
+    "sequelize": "^6.14.1"
   },
   "devDependencies": {
     "eslint": "^8.7.0",
