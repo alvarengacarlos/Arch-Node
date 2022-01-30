@@ -3,3 +3,4 @@
 const httpFramework = require("./HttpFramework");
 
 httpFramework.init();
+httpFramework.addMiddlewareToAcceptJson();

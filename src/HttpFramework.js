@@ -74,6 +74,14 @@ class HttpFramework {
         );
     }
 
+    addMiddlewareToAcceptJson() {
+        this.httpProtocolHandlerFramework.use(express.json());
+    }
+
+    addMiddlewareToApplication(middleware) {
+        this.httpProtocolHandlerFramework.use(middleware);
+    }
+
     init() {
         this.httpProtocolHandlerFramework.listen(3000, () => {
             console.log("Server running...");
