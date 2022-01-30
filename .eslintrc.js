@@ -40,7 +40,7 @@ module.exports = {
             "afterColon": true
         }],
         "lines-between-class-members": ["warn"],
-        "max-len": ["warn", {"code": 100, "comments": 80}],
+        "max-len": ["warn", {"code": 100, "comments": 80, "ignoreUrls": true}],
         "max-statements-per-line": ["warn", {"max": 1}],
         "new-parens": "error",
         "newline-per-chained-call": "warn",
